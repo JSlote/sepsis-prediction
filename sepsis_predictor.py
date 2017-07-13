@@ -32,7 +32,7 @@ class sepsis_predictor:
 
 
     def _balance(self, X, y, percent_septic):
-        """Remove non-sepsis data at random to make sepsis cases 50% of the data"""
+        """Remove non-sepsis data at random to make sepsis cases percent_septic% of the data"""
         #split X on sepsis condition
         no_sepsis = X[y == 0]
         sepsis = X[y == 1]
@@ -127,6 +127,7 @@ class sepsis_predictor:
         X = self._scale(X_balanced)
 
         #train
+
         # self.classifier = RandomForestClassifier(n_estimators = 200,
         #                              min_samples_split = 2,
         #                              random_state = 0,

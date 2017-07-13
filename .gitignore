@@ -3,3 +3,4 @@
 __pycache__
 *.dat
 MIMIC3_processed.json
+score.py
